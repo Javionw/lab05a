@@ -96,9 +96,7 @@ function sumArray(sumArr) {
     total,
     `${sumArr} was passed in an array of numbers, and ${total} is their sum.`
   ])
-  return [
-    total,
-    `${sumArr} was passed in as an array of numbers, and ${total} is their sum.`
+  return [total,`${sumArr} was passed in as an array of numbers, and ${total} is their sum.`
   ];
 }
 
@@ -119,12 +117,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+let testArray2 = [2, 3, 4];
+
 function multiplyArray(multArr) {
+    let product = 1;
+    console.log(multArr);
+        for(let number_index in multArr){
+        product = multiply(product, multArr[number_index])[0];
+    }
+    console.log(product);
+    return[product,`The numbers ${multArr} have a product of ${product}.`];
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
